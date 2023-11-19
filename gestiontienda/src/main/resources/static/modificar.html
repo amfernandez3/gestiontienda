@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modificar Producto</title>
+</head>
+<body>
+<h1>Modificar Producto</h1>
+<form action="/ModificarServlet" method="post">
+    <label for="nuevoNombre">Nuevo Nombre:</label>
+    <input type="text" id="nuevoNombre" name="nuevoNombre" required>
+    <br>
+    <label for="nuevaSeccion">Nueva Sección:</label>
+    <input type="text" id="nuevaSeccion" name="nuevaSeccion" required>
+    <br>
+    <label for="nuevoPrecio">Nuevo Precio:</label>
+    <input type="number" id="nuevoPrecio" name="nuevoPrecio" required>
+    <br>
+    <label for="nuevoStock">Nuevo Stock:</label>
+    <input type="number" id="nuevoStock" name="nuevoStock" required>
+    <br>
+    <input type="submit" value="Guardar Cambios">
+</form>
+</body>
+</html>
