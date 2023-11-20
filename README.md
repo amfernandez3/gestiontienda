@@ -16,7 +16,7 @@ La aplicación consiste en un CRUD estándar de productos con las siguientes ope
 - **Búsquedas:** Permite buscar productos por sección.
 - **Altas:** Permite dar de alta nuevos productos llenando todas sus propiedades.
 - **Eliminación:** Permite la eliminación de un producto.
-- **Modificación:** Permite cambiar el precio de un producto.
+- **Modificación:** Permite cambiar los atributos de un producto.
 
 ## Tecnologías Utilizadas
 
