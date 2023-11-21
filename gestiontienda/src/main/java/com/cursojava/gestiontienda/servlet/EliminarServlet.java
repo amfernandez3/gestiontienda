@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class EliminarServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String nombreProducto = request.getParameter("nombre");
 
         // Lógica para eliminar el producto de la lista en la sesión
