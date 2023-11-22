@@ -1,9 +1,6 @@
 package com.cursojava.gestiontienda.config;
 
-import com.cursojava.gestiontienda.servlet.AltaServlet;
-import com.cursojava.gestiontienda.servlet.EliminarServlet;
-import com.cursojava.gestiontienda.servlet.ModificarServlet;
-import com.cursojava.gestiontienda.servlet.MostrarTablaServlet;
+import com.cursojava.gestiontienda.servlet.*;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -45,6 +42,15 @@ public class ServletConfig {
     @Bean
     public ServletRegistrationBean<ModificarServlet> ModificarServletRegistrationBean() {
         return new ServletRegistrationBean<>(new ModificarServlet(), "/ModificarServlet");
+    }
+
+    /**
+     * Servlet que responde a la petición HTTP /ModificarServlet
+     * @return respuesta a la petición HTTP
+     */
+    @Bean
+    public ServletRegistrationBean<AgregarProductosEjemploServlet> AgregarproductosEjemploServletRegistrationBean() {
+        return new ServletRegistrationBean<>(new AgregarProductosEjemploServlet(), "/AgregarProductosEjemploServlet");
     }
 
 }

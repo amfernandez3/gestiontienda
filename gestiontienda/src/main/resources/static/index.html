@@ -3,25 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/CSS/style.css">
-    <title>Title</title>
+    <title>Gestión de productos</title>
     <script src="/script/script.js"></script>
-
 </head>
 <body>
 <header>
-    <h1>Gestión de productos.</h1>
-    <nav>
-    <ul>
-        <li><a href="/alta.html">Alta de producto</a></li>
-        <li><a href="/MostrarTablaServlet">Ver productos</a></li>
-    </ul>
-</nav>
+    <h1 class="fw-bold text-center">Gestión de productos</h1>
+    <nav class="text-center">
+        <ul class="list-unstyled">
+            <li class="d-inline mx-2"><a class="btn btn-dark" href="/alta.html">Alta de producto</a></li>
+            <li class="d-inline mx-2"><a class="btn btn-dark" href="/MostrarTablaServlet">Ver productos</a></li>
+            <li class="d-inline mx-2"><a class="btn btn-dark" href="/AgregarProductosEjemploServlet">Agregar productos de ejemplo</a></li>
+        </ul>
+    </nav>
 </header>
 <section>
-    <p>Página de gestión de una tienda compuesta por productos.</p>
-    <p>Los productos tienen los siguientes atributos: nombre, tipo, precio y stock.</p>
+    <div class="container">
+        <p class="lead">Página de gestión de una tienda compuesta por productos.</p>
+        <p class="lead">Los productos tienen los siguientes atributos: nombre, tipo, precio y stock.</p>
+    </div>
 </section>
+<footer id="footer"></footer>
 
+<script>
+    // Función para mostrar la hora del servidor en tiempo real
+    function updateServerTime() {
+        var footer = document.getElementById("footer");
+        var currentDate = new Date();
+        var hours = currentDate.getHours();
+        var minutes = currentDate.getMinutes();
+        var seconds = currentDate.getSeconds();
+        var formattedTime = hours + ":" + minutes + ":" + seconds;
+
+        footer.innerHTML = "Hora del servidor: " + formattedTime;
+
+        // Actualiza cada segundo
+        setTimeout(updateServerTime, 1000);
+    }
+
+    // Inicia la función al cargar la página
+    updateServerTime();
+</script>
 </body>
 </html>
